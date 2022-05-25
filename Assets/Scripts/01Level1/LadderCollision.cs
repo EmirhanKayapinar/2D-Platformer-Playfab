@@ -24,12 +24,14 @@ public class LadderCollision : MonoBehaviour
                 {
                     _anim.speed = 1;
                     _player.constraints = RigidbodyConstraints2D.None;
+                    _player.constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
 
                 else
                 {
                     _anim.speed = 0;
                     _player.constraints = RigidbodyConstraints2D.None;
+                    _player.constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
             }
         }
@@ -42,6 +44,7 @@ public class LadderCollision : MonoBehaviour
         _anim.SetBool("__isJump", true);
         _player.gravityScale = 1;
         _player.constraints = RigidbodyConstraints2D.None;
+        _player.constraints = RigidbodyConstraints2D.FreezeRotation;
         _anim.speed = 1;
         _playerObject.GetComponent<PlayerController>()._isVerticalActive = false;
         _ladder = false;

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     MoverController _mover;
+    OnGroundCheck _onGround;
     [SerializeField] Transform _playerTransform;
     [SerializeField] float _hSpeed, _vSpeed, _jSpeed;
     [SerializeField] bool _isHorizontalActive, _isJumpActive, _isFlipActive;
@@ -13,10 +14,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] SpriteRenderer _playerSprite;
     [SerializeField] Rigidbody2D _playerRigid;
     [SerializeField] Animator _anim;
+    [SerializeField] GameObject _onground;
     bool _spaceControl;
+    bool _onGroundCheck;
     private void Awake()
     {
         _mover = new MoverController();
+        
+       
     }
 
     void Horizontal()
@@ -31,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        switch (_spaceControl)
+        switch (_spaceControl &&_onGroundCheck)
         {
             case true:
                 _mover.JumpMove(_playerRigid, _jSpeed, _isJumpActive);
@@ -40,6 +45,7 @@ public class PlayerController : MonoBehaviour
         }
 
         _spaceControl = false;
+
     }
     void Flip()
     {
@@ -52,6 +58,7 @@ public class PlayerController : MonoBehaviour
         Vertical();
         Flip();
         Jump();
+        _onGroundCheck = _onground.GetComponent<OnGroundCheck>()._isOnGround;
     }
     void Start()
     {

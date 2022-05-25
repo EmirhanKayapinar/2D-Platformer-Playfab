@@ -6,7 +6,7 @@ public class OnGroundCheck : MonoBehaviour
 {
     [SerializeField] Transform[] _transforms;
     [SerializeField] float _maxDistance;
-    [SerializeField] bool _isOnGround=false;
+    public bool _isOnGround=false;
     [SerializeField] LayerMask _layermask;
     [SerializeField] Animator _anim;
     public bool _OnGround => _isOnGround;
