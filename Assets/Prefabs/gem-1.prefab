@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4046419963235046882}
   - component: {fileID: 2276226082745644671}
   - component: {fileID: 8396264754572304056}
+  - component: {fileID: 6764591402339531023}
+  - component: {fileID: 1840657592899120938}
   m_Layer: 0
   m_Name: gem-1
   m_TagString: Untagged
@@ -102,3 +104,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6764591402339531023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781419036781922771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2c0c7a322e2ac4e9a0aeb4f6b6b461, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1840657592899120938
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781419036781922771}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.013672218}
+  serializedVersion: 2
+  m_Radius: 0.16125844
